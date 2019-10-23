@@ -1,0 +1,35 @@
+a:hover {
+    text-decoration: underline !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, sans-serif !important;
+}
+
+body, h4 {
+    font-family: Montserrat, sans-serif !important;
+}
+
+body {
+    font-size: 16px !important;
+}
+
+h1 {
+    font-size: 40px !important;
+}
+
+h2 {
+    font-size: 36px !important;
+}
+
+h3 {
+    font-size: 32px !important;
+}
+
+h4 {
+    font-size: 26px !important;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.84) !important;
+}

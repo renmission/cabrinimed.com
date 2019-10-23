@@ -1,0 +1,56 @@
+<div class="container">
+    <h1 class="text-title display-3">Edit Service</h1>
+    <form action="/admin/services/edit/{{service.s_id}}?_method=PUT" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="">Title: *</label>
+            <input type="text" name="s_title" class="form-control" value="{{service.s_title}}">
+        </div>
+        <div class="form-group">
+            <label for="">Header: *</label>
+            <input type="text" name="s_header" class="form-control" value="{{service.s_header}}">
+        </div>
+
+        <div class="form-group">
+            <label for="">Image: *</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01" name="s_Image" value="{{service.s_Image}}">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file, max 3mb: *</label>
+                </div>
+
+            </div>
+            <img src="#" id="imgPreview" alt="" style="margin: * 50px">
+
+            <img src="/uploads/{{service.s_Image}}" id="s_Image" alt="{{service.s_Image}}" width="150"
+                style="margin: * 50px">
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Content: *</label>
+            <textarea type="text" name="s_content" class="form-control" id="editor">{{service.s_content}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="">Status: *</label>
+            <input type="text" name="s_status" class="form-control" value="{{service.s_status}}">
+        </div>
+        <div class="form-group">
+            <label for="">Keyword: *</label>
+            <input type="text" name="s_keyword" class="form-control" value="{{service.s_keyword}}">
+        </div>
+
+        <div class="form-group">
+            <label for="">Description: *</label>
+            <textarea type="text" name="s_description" class="form-control"
+                id="editor1">{{service.s_description}}</textarea>
+        </div>
+
+
+        <input type="submit" value="Update" class="btn btn-success">
+
+    </form>
+</div>

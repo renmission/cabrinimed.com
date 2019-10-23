@@ -1,0 +1,41 @@
+<!-- Start main-content -->
+<div class="main-content">
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay" data-bg-img="images/bg/bg8.webp">
+        <div class="container pt-60 pb-60">
+            <!-- Section Content -->
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="title text-white ">Services</h2>
+                        <ol class="breadcrumb text-center text-black mt-10">
+                            <li><a href="/" class="text-white">Home</a></li>
+                            <li><a href="/services" class="text-white">Services</a></li>
+                            <li class="active text-theme-colored">Services List</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+
+
+
+                {{#each services}}
+                <div class="col-md-4">
+                    <ul class="list angle-double-right">
+                        <a href="services/offer/{{s_slug}}">{{s_title}}</a>
+                    </ul>
+                </div>
+                {{/each}}
+
+
+            </div>
+        </div>
+    </section>
+</div>
+<!-- end main-content -->

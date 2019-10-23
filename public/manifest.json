@@ -1,0 +1,20 @@
+{
+  "short_name": "St. Cabrini",
+  "name": "St. Frances Cabrini Medical Center",
+  "icons": [
+    {
+      "src": "images/sfcmc-144x144.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "images/sfcmc-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "/index.php",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#1b5836"
+}

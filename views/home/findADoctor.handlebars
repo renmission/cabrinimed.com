@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+<!-- Start main-content -->
+<div class="main-content ">
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay " data-bg-img="images/bg/bg8.webp">
+        <div class="container pt-60 pb-60">
+            <!-- Section Content -->
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class=" text-white">Your Doctor Is Only A Click Away</h1>
+                        <ol class="breadcrumb text-center mt-10">
+                            <li><a href="/" class="text-white">Home</a></li>
+                            <li class="active text-theme-colored">Find a Doctor</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-content">
+                        <div class="row">
+
+
+                            <h1 class="text-title"> Find a doctor
+                            </h1>
+                            <p class="text-lead">Browse your desired medical professionals and their schedule online</p>
+                            <br>
+
+                            <div class="table-responsive">
+                                <table id="example" class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Specialization</th>
+                                            <th>HMO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each doctors}}
+                                        <tr>
+                                            <td>{{DoctorFullName}}, {{MD}}</td>
+                                            <td>{{SUBSPECIALTY}}</td>
+                                            <td>{{ClinicRoom}}</td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Specialization</th>
+                                            <th>HMO</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Setup - add a text input to each footer cell
+            $('#example tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+            });
+
+            // DataTable
+            var table = $('#example').DataTable();
+
+            // Apply the search
+            table.columns().every(function () {
+                var that = this;
+
+                $('input', this.footer()).on('keyup change clear', function () {
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+        });
+    </script>

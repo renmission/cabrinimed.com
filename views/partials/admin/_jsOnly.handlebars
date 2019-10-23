@@ -1,0 +1,48 @@
+<script src="https://kit.fontawesome.com/1ff5057583.js" crossorigin="anonymous"></script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/js/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/js/sb-admin-2.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            let reader = new FileReader();
+
+            reader.onload = function (e) {
+                $("#imgPreview").attr('src', e.target.result).width(100);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#inputGroupFile01").change(function () {
+        readURL(this);
+    });
+</script>
+
+<script src="//cdn.ckeditor.com/4.10.0/full/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+    CKEDITOR.replace('editor1');
+</script>

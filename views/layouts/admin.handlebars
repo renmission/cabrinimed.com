@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> admin/_header }}
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {{> admin/_sidebar-nav }}
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+                {{> admin/_nav }}
+
+                <div class="container">
+
+                    {{> _errors }}
+                    {{> _msg }}
+
+                </div>
+
+                {{{body}}}
+
+            </div>
+
+            {{> admin/_footer }}
+
+        </div>
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    {{> admin/_jsOnly }}
+
+</body>
+
+</html>
